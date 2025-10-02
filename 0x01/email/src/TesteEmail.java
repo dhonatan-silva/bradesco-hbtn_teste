@@ -7,14 +7,14 @@ public class TesteEmail {
 	void testar_email_com_arroba() {
 		Pessoa pessoa = new Pessoa();
 		boolean email = pessoa.emailValid("jhon_doe@mail.com");
-		Assertions.assertEquals(true, email);
+		Assertions.assertTrue(email);
 	}
 
 	@Test
 	void testar_email_sem_arroba() {
 		Pessoa pessoa = new Pessoa();
 		boolean email = pessoa.emailValid("jhon_doe#mail.com");
-		Assertions.assertEquals(false, email);
+		Assertions.assertTrue(!email);
 	}
 
 	@Test
